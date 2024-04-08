@@ -52,11 +52,11 @@ jobs:
             done
 
         - name: Python unit tests
-          run: pytest -vv xcell --cov=xcell
+          run: pytest -vv cosmography --cov=cosmography 
 
         - name: Flake
           run: |
-            flake8 xcell/
+            flake8 cosmography/
 
         - name: coveralls
           env:
