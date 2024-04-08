@@ -1,7 +1,6 @@
 from .cosmography_base import CosmographyBase
-import numpy as np
 
-class CosmograghyCC(CosmographyBase)
+class CosmograghyCC(CosmographyBase):
     self.data_name = 'CC'
     def __init__(self):
         self.z = np.array([0.07  , 0.09  , 0.12  , 0.17  , 0.179 , 0.199 , 0.2   ,

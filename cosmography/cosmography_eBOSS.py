@@ -1,7 +1,6 @@
 from .cosmography_base import CosmographyBase
 
-
-class CosmograghyeBOSS(CosmographyBase)
+class CosmograghyeBOSS(CosmographyBase):
     self.data_name = 'eBOSS'
     def __init__(self):
         self.rd = 147.3
