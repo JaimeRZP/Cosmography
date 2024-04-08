@@ -1,5 +1,4 @@
 from .cosmography_base import CosmographyBase
-import numpy as np
 
 class CosmograghyCMB(CosmographyBase)
     self.data_name = 'CMB'

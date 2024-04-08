@@ -1,5 +1,5 @@
 from .cosmography_base import CosmographyBase
-import numpy as np
+
 
 class CosmograghyeBOSS(CosmographyBase)
     self.data_name = 'eBOSS'
