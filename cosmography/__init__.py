@@ -10,5 +10,3 @@ from .cosmography_eBOSS import CosmographyeBOSS
 from .cosmography_FastSound import CosmographyFastSound
 from .cosmography_Vipers import CosmographyVipers
 from .cosmography_Wigglez import CosmographyWigglez
-
-import numpy as np

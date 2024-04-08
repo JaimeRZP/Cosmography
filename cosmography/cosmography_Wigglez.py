@@ -10,13 +10,5 @@ class CosmograghyWigglez(CosmographyBase):
                                 [0, 2.54, 5.184]])
         self.cov = 10**(-3)*cov_no_jitter
 
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
     
         

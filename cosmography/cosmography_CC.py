@@ -23,13 +23,5 @@ class CosmograghyCC(CosmographyBase):
             cov[i,i] = err[i]**2
         self.cov = cov
 
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
     
         

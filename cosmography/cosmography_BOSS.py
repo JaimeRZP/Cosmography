@@ -28,15 +28,6 @@ class CosmograghyBOSS(CosmographyBase):
                     2.46111e-01, 8.11829e-04, 1.42289e-03, 6.62824e-04],
                    [4.75548e-03, 1.05956e-02, 2.14133e-02, 4.36366e-02, 1.81786e-01,
                     4.78570e-01, 2.64615e-04, 6.62824e-04, 1.18576e-03]])
-
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
     
     def get_rd(self):
     """

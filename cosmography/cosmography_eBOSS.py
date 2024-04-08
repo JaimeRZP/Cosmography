@@ -13,15 +13,6 @@ class CosmograghyeBOSS(CosmographyBase):
                              [-0.05656, 0.2640, -0.006204],
                              [0.01750, -0.006204, 0.002308]])
 
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
-    
     def get_rd(self):
     """
     Returns the sound horizon at the drag epoch
@@ -29,5 +20,5 @@ class CosmograghyeBOSS(CosmographyBase):
         rd (float): sound horizon at the drag epoch
     """
         return self.rd
-    
+
         

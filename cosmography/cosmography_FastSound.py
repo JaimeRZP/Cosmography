@@ -7,13 +7,5 @@ class CosmograghyFastSound(CosmographyBase):
         self.data = np.array([0.482])
         self.cov = np.array([[0.116**2]])
 
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
     
         

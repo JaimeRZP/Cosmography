@@ -11,15 +11,6 @@ class CosmograghyDS17(CosmographyBase)
         self.data = np.array(SN.mb)
         base_cov = np.genfromtxt(self.path+'syscov_panth.txt') 
         self.cov = base_cov + np.diag(SN.dmb**2)
-
-    def get_redshift(self):
-        return self.z
-    
-    def get_data(self):
-        return self.data
-    
-    def get_cov(self):
-        return self.cov
     
     def _read_light_curve_parameters(self):
         with open(self.path+"lcparam_DS17f.txt", 'r') as text:
