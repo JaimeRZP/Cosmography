@@ -6,7 +6,12 @@ Please feel free to use.
 ## Example
 
 ```Python
+import sys
+import numpy as np
+sys.path.insert(1, '/home/user/xCell')
+import cosmography
 
+data = cosmography.Sixdf()
 ```
 
 ## Citation
