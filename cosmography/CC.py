@@ -1,4 +1,5 @@
 from .base import CosmographyBase
+import numpy as np
 
 class CC(CosmographyBase):
     def __init__(self):

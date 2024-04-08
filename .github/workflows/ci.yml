@@ -1,0 +1,65 @@
+name: continuous-integration
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        py: [ 3.7 ]
+        CC: [ gcc ]
+
+    steps:
+        - uses: actions/checkout@v2
+
+        - name: Set up Python ${{ matrix.py }}
+          uses: actions/setup-python@v2
+          with:
+            python-version: ${{ matrix.py }}
+
+        #- name: Cache pip
+        #  uses: actions/cache@v2
+        #  with:
+        #    # Based on: https://medium.com/ai2-blog/python-caching-in-github-actions-e9452698e98d
+        #    path: ${{ env.pythonLocation }}
+        #    # Use hashFiles to regenerate cache when adding new dependencies
+        #    key: ${{ runner.os }}-cache-${{ hashFiles('requirements.txt') }}
+
+        - name: Install GSL, FFTW (linux)
+          run: |
+            sudo -H apt-get install libgsl-dev libfftw3-dev libcfitsio-dev
+
+        - name: Install python dependencies
+          run: |
+            python -m pip install -U pip
+            # Install wheel to avoid recompiling pymaster, pyccl, camb, etc.
+            pip install -U wheel
+            # Install other CI dependencies
+            pip install -U pytest pytest-cov coveralls
+            # pip install -U -r requirements.txt
+            # before installing its dependencies
+            # (https://github.com/LSSTDESC/NaMaster/issues/138)
+            set -e
+            for i in `cat requirements.txt`; do
+               pip install -U $i;
+            done
+
+        - name: Python unit tests
+          run: pytest -vv xcell --cov=xcell
+
+        - name: Flake
+          run: |
+            flake8 xcell/
+
+        - name: coveralls
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          run:
+            coveralls --service=github

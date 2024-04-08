@@ -9,9 +9,9 @@ Please feel free to use.
 import sys
 import numpy as np
 sys.path.insert(1, '/home/user/xCell')
-import cosmography
+import cosmography as CG
 
-data = cosmography.Sixdf()
+data = CG.Sixdf()
 ```
 
 ## Citation

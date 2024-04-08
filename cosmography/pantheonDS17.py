@@ -1,23 +1,13 @@
 from .base import CosmographyBase
 import numpy as np
-from pandas import read_table
 
 class PantheonDS17(CosmographyBase):
-    def __init__(self):
+    def __init__(self, path='../data/PantheonDS17/'):
         self.data_name = 'PantheonDS17'
-        self.path = "../data/PantheonDS17/"
-        SN = _read_light_curve_parameters()
-        self.z = np.array(SN.zcmb)
-        self.data = np.array(SN.mb)
-        base_cov = np.genfromtxt(self.path+'syscov_panth.txt') 
-        self.cov = base_cov + np.diag(SN.dmb**2)
-    
-    def _read_light_curve_parameters(self):
-        with open(self.path+"lcparam_DS17f.txt", 'r') as text:
-            clean_first_line = text.readline()[1:].strip()
-            names = [e.strip().replace('3rd', 'third')
-                    for e in clean_first_line.split()]
+        SN = np.transpose(np.loadtxt(path+'lcparam_DS17f.txt', usecols=(1, 4, 5)))
+        self.z = np.array(SN[0])
+        self.data = np.array(SN[1])
+        base_cov = np.loadtxt(path+'syscov_panth.txt') 
+        self.cov = base_cov + np.diag(SN[2]**2)
 
-        lc_parameters = read_table(path, sep=' ', names=names, header=0, index_col=False)
-        return lc_parameters
         
