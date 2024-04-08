@@ -1,8 +1,8 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
 
-class CosmograghyCC(CosmographyBase):
-    self.data_name = 'CC'
+class CC(CosmographyBase):
     def __init__(self):
+        self.data_name = 'CC'
         self.z = np.array([0.07  , 0.09  , 0.12  , 0.17  , 0.179 , 0.199 , 0.2   ,
                    0.27  , 0.28  , 0.352 , 0.38  , 0.3802, 0.4   , 0.4004, 0.4247,
                    0.44  , 0.4497, 0.47  , 0.4783, 0.48  , 0.51  , 0.593 , 0.6   ,

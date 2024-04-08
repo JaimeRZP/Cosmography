@@ -1,8 +1,9 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
+import numpy as np
 
-class CosmograghyeBOSS(CosmographyBase):
-    self.data_name = 'eBOSS'
+class eBOSS(CosmographyBase):
     def __init__(self):
+        self.data_name = 'eBOSS'
         self.rd = 147.3
         self.z = np.array([1.48])
         para = 13.23
@@ -14,11 +15,11 @@ class CosmograghyeBOSS(CosmographyBase):
                              [0.01750, -0.006204, 0.002308]])
 
     def get_rd(self):
-    """
-    Returns the sound horizon at the drag epoch
-    Returns:
-        rd (float): sound horizon at the drag epoch
-    """
+        """
+        Returns the sound horizon at the drag epoch
+        Returns:
+            rd (float): sound horizon at the drag epoch
+        """
         return self.rd
 
         

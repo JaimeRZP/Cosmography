@@ -1,8 +1,9 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
+import numpy as np
 
-class CosmograghyVipers(CosmographyBase)
-    self.data_name = 'Vipers'
+class Vipers(CosmographyBase):
     def __init__(self):
+        self.data_name = 'Vipers'
         self.z = np.array([0.60, 0.86])
         self.data = np.array([0.55, 0.40])
         self.cov = np.array([[0.12**2, 0], 

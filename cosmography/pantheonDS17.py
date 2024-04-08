@@ -1,10 +1,10 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
 import numpy as np
 from pandas import read_table
 
-class CosmograghyDS17(CosmographyBase)
-    self.data_name = 'DS17'
+class PantheonDS17(CosmographyBase):
     def __init__(self):
+        self.data_name = 'PantheonDS17'
         self.path = "../data/PantheonDS17/"
         SN = _read_light_curve_parameters()
         self.z = np.array(SN.zcmb)
@@ -18,7 +18,6 @@ class CosmograghyDS17(CosmographyBase)
             names = [e.strip().replace('3rd', 'third')
                     for e in clean_first_line.split()]
 
-        lc_parameters = read_table(
-            path, sep=' ', names=names, header=0, index_col=False)
+        lc_parameters = read_table(path, sep=' ', names=names, header=0, index_col=False)
         return lc_parameters
         

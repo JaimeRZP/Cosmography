@@ -1,6 +1,7 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
+import numpy as np
 
-class Cosmograghy6df(CosmographyBase):
+class Sixdf(CosmographyBase):
     """
     6df data
     """

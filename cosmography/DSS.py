@@ -1,6 +1,7 @@
-from .cosmography_base import CosmographyBase
+from .base import CosmographyBase
+import numpy as np
 
-class CosmograghyDSS(CosmographyBase):
+class DSS(CosmographyBase):
     def __init__(self):
         self.data_name = 'DSS'
         self.z = np.array([0.0])
