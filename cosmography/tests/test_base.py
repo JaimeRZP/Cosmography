@@ -45,7 +45,7 @@ def tests():
     assert FastSound.cov is not None
 
     # PantheonDS17
-    PantheonDS17 = CG.PantheonDS17()
+    PantheonDS17 = CG.PantheonDS17(path='data/PantheonDS17/')
     assert PantheonDS17.z is not None
     assert PantheonDS17.data is not None
     assert PantheonDS17.cov is not None
