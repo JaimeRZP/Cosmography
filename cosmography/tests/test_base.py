@@ -9,7 +9,7 @@ def tests():
     assert Sixdf.cov is not None
 
     # BOSS
-    BOSS = CG.BOSS()
+    BOSS = CG.BOSSDR12()
     assert BOSS.z is not None
     assert BOSS.data is not None
     assert BOSS.cov is not None
@@ -33,7 +33,7 @@ def tests():
     assert DSS.cov is not None
 
     # eBOSS
-    eBOSS = CG.eBOSS()
+    eBOSS = CG.eBOSSDR16()
     assert eBOSS.z is not None
     assert eBOSS.data is not None
     assert eBOSS.cov is not None
