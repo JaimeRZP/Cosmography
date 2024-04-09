@@ -3,6 +3,7 @@
 My compilations of cosmography data. 
 Please feel free to use.
 Data not my own.
+
 ## Example
 
 ```Python
