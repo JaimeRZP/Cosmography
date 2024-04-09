@@ -1,8 +1,8 @@
 # Cosmography Data Repo
 
-My Cosmography data repo. 
+My compilations of cosmography data. 
 Please feel free to use.
-
+Data not my own.
 ## Example
 
 ```Python
