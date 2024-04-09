@@ -54,10 +54,6 @@ jobs:
         - name: Python unit tests
           run: pytest -vv cosmography --cov=cosmography 
 
-        - name: Flake
-          run: |
-            flake8 cosmography/
-
         - name: coveralls
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,6 +3,26 @@ import numpy as np
 
 
 class CC(CosmographyBase):
+    """
+        @article{2011.11645,
+        title        = {{Eppur {\`e} piatto? The Cosmic Chronometers Take on Spatial Curvature and Cosmic Concordance}},
+        author       = {{Vagnozzi}, Sunny and {Loeb}, Abraham and {Moresco}, Michele},
+        year         = 2021,
+        month        = feb,
+        journal      = {\apj},
+        volume       = 908,
+        number       = 1,
+        pages        = 84,
+        doi          = {10.3847/1538-4357/abd4df},
+        keywords     = {Observational cosmology, Cosmic background radiation, Galaxy ages, Cosmological parameters, Galaxies, 1146, 317, 576, 339, 573, Astrophysics - Cosmology and Nongalactic Astrophysics, General Relativity and Quantum Cosmology},
+        eid          = 84,
+        archiveprefix = {arXiv},
+        eprint       = {2011.11645},
+        primaryclass = {astro-ph.CO},
+        adsurl       = {https://ui.adsabs.harvard.edu/abs/2021ApJ...908...84V},
+        adsnote      = {Provided by the SAO/NASA Astrophysics Data System}
+        }
+    """
     def __init__(self):
         self.data_name = 'CC'
         self.z = np.array([
