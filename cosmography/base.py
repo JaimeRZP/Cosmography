@@ -1,4 +1,4 @@
-import numpy  as np
+
 
 class CosmographyBase(object):
     """
@@ -21,8 +21,8 @@ class CosmographyBase(object):
         Returns:
             z (Array): redshift array
         """
-        if self.z == None:
-            raise NotImplementedError("This data set doesn't define this field")
+        if self.z is None:
+            raise NotImplementedError("Not found")
         else:
             return self.z
 
@@ -33,8 +33,8 @@ class CosmographyBase(object):
         Returns:
             data (Array): data array
         """
-        if self.data == None:
-            raise NotImplementedError("This data set doesn't define this field")
+        if self.data is None:
+            raise NotImplementedError("Not found")
         else:
             return self.data
 
@@ -45,8 +45,7 @@ class CosmographyBase(object):
         Returns:
             cov (Array): covariance
         """
-        if self.cov == None:
-            raise NotImplementedError("This data set doesn't define this field")
+        if self.cov is None:
+            raise NotImplementedError("Not found")
         else:
             return self.cov
-

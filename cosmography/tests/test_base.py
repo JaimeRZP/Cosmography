@@ -1,5 +1,5 @@
 import cosmography as CG
-import pytest
+
 
 def tests():
     # sixdf

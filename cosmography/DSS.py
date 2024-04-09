@@ -1,6 +1,7 @@
 from .base import CosmographyBase
 import numpy as np
 
+
 class DSS(CosmographyBase):
     def __init__(self):
         self.data_name = 'DSS'
