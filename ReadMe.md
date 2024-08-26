@@ -9,8 +9,8 @@ Data not my own.
 ```Python
 import sys
 import numpy as np
-sys.path.insert(1, '/home/user/xCell')
-import cosmography as CG
+sys.path.append('.')
+import cosmography as cg
 
 data = CG.Sixdf()
 ```
