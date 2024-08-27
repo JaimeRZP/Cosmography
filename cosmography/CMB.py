@@ -27,3 +27,5 @@ class CMB(CosmographyBase):
         self.z = np.array([1089.95])
         self.data = np.array([1.04109])
         self.cov = np.array([[0.00030**2]])
+        self.rd = 147.05
+        self.rs = 144.39

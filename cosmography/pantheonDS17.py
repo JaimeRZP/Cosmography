@@ -31,3 +31,5 @@ class PantheonDS17(CosmographyBase):
         self.data = np.array(SN[1])
         base_cov = np.loadtxt(path+'syscov_panth.txt')
         self.cov = base_cov + np.diag(SN[2]**2)
+        self.M_SH0ES = 19.2
+        self.M_planck = 19.4
